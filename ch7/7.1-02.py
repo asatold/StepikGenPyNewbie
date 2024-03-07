@@ -7,8 +7,9 @@
 mystr = str(input()) # строка для вывода
 count = int(input()) # сколько раз повторять
 
-def foo(s: str, c: int):
-    for i in range(c):
+def strToCount(s: str, c: int):
+    # повторяет строку s количество раз c
+    for _ in range(c):
         print(f'{s}')
 
-foo(mystr, count)
+strToCount(mystr, count)
