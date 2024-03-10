@@ -7,8 +7,13 @@
 
 kat = int(input())  # катет треугольника
 
-def trianglestar(katet: int):
-    for i in range(katet, 0, -1):
-        print(f'*' * i)
+# def trianglestar(katet: int):
+#     for i in range(katet, 0, -1):
+#         print(f'*' * i)
+
+def trianglestar(katet):
+    for i in range(katet):
+        if i < katet:
+            print(f'*' * (katet - i))
 
 trianglestar(kat)
