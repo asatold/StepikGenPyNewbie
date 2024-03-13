@@ -8,12 +8,19 @@
 
 a, b = int(input()), int(input())
 
-def some(aa: int, bb: int):
-    count = 0
+# def some(aa: int, bb: int):
+#     count = 0
 
+#     for i in range(aa, bb + 1):
+#         if (i ** 3) % 10 == 4 or (i ** 3) % 10 == 9:
+#             count += 1
+#     print(f'{count}')
+
+def some(aa: int, bb: int) -> int:
+    count: int = 0
     for i in range(aa, bb + 1):
         if (i ** 3) % 10 == 4 or (i ** 3) % 10 == 9:
             count += 1
-    print(f'{count}')
+    return count
 
-some(a, b)
+print(some(a, b))
