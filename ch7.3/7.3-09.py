@@ -12,9 +12,12 @@ def maxAndSecondmax(nn: int) -> str:
     max: int = 0
     secondmax: int = 0
     for i in range(n):
-        dig =  float(input())
+        dig =  int(input())
         if dig > max:
             max, secondmax = dig, max
+        else:
+            if dig > secondmax:
+                secondmax = dig
     print(f'\n{max}\n{secondmax}')
 
 maxAndSecondmax(n)
