@@ -10,10 +10,19 @@
 Программа должна вывести минимально возможное количество чеканных монет для оплаты."""
 
 cent = int(input())
-count = 0
 
-while cent > 0:
-    if cent >= 25:
-        count += cent // 25
-        cent %= 25
-     
+def countCent(cents: int) -> int:
+    count = 0
+    if cents >= 25:
+        count += cents // 25
+        cents %= 25
+    if cents >= 10:
+        count += cents // 10
+        cents %= 10
+    if cents >= 5:
+        count += cents // 5
+        cents %= 5
+    count += cents
+    return count
+
+print(f'{countCent(cent)}')     
