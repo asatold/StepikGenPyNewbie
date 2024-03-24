@@ -10,7 +10,7 @@ def maxMin(nn: int) -> str:
     maxN = nn % 10
     minN = nn % 10
     while nn != 0:
-        tempN = nn % 10
+        tempN: int = nn % 10
         if maxN < tempN:
             maxN = tempN
         elif minN > tempN:
